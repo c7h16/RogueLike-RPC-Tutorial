@@ -9,9 +9,11 @@
 #ifndef game_hpp
 #define game_hpp
 
-#include <SDL2/SDL.h>
 #include <stdio.h>
 #include <iostream>
+
+#include <SDL2/SDL.h>
+#include "SDL2_Image/SDL_Image.h"
 
 class Game {
 

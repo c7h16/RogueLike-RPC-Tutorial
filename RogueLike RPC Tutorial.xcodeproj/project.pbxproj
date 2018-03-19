@@ -10,13 +10,14 @@
 		8B82A55F205F330B00CFA43E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B82A55E205F330B00CFA43E /* main.cpp */; };
 		8B82A567205F333700CFA43E /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B82A566205F333700CFA43E /* SDL2.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8B82A56E205F3A8B00CFA43E /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B82A56C205F3A8B00CFA43E /* game.cpp */; };
+		8B82A570205F5ADA00CFA43E /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B82A56F205F5ADA00CFA43E /* SDL2_image.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8B82A559205F330B00CFA43E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = "/Users/developer/Documents/CPP Projects/RogeLike RPG Tutorial/RogueLike RPC Tutorial/Assets";
 			dstSubfolderSpec = 0;
 			files = (
 			);
@@ -30,6 +31,8 @@
 		8B82A566205F333700CFA43E /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		8B82A56C205F3A8B00CFA43E /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
 		8B82A56D205F3A8B00CFA43E /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
+		8B82A56F205F5ADA00CFA43E /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		8B82A571205F73A100CFA43E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B82A570205F5ADA00CFA43E /* SDL2_image.framework in Frameworks */,
 				8B82A567205F333700CFA43E /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +79,7 @@
 		8B82A565205F333700CFA43E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B82A56F205F5ADA00CFA43E /* SDL2_image.framework */,
 				8B82A566205F333700CFA43E /* SDL2.framework */,
 			);
 			name = Frameworks;
@@ -83,9 +88,10 @@
 		8B82A568205F33BA00CFA43E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8B82A571205F73A100CFA43E /* Assets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 

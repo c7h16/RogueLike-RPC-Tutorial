@@ -9,25 +9,33 @@
 
 #include "game.hpp"
 
+SDL_Texture* playerTex;
+SDL_Rect sourceRect;
+SDL_Rect destinationRect;
 
-Game::Game() {
+Game::Game()
+{
 }
 
-Game::~Game() {
+Game::~Game()
+{
 }
 
-void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen) {
+void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen)
+{
     
     //added so we can decide if there is a full screen flag - need to review video #1 to fully understand 14:00
     int flags = 0;
     
-    if(fullscreen) {
+    if(fullscreen)
+        {
         flags = SDL_WINDOW_FULLSCREEN;
-    }
+        }
     
     // initialize the system, then the game window then the renderer.
     
-    if (SDL_Init(SDL_INIT_EVERYTHING) == 0) {
+    if (SDL_Init(SDL_INIT_EVERYTHING) == 0)
+        {
         std::cout << "SDL Subsystems Initialized..." << std::endl;
         
         window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
@@ -36,8 +44,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         }
         
         renderer = SDL_CreateRenderer(window, -1, 0);
-        if (renderer) {
-            
+        if (renderer)
+        {
             //set the Render draw color
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             
@@ -47,9 +55,14 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         
         // if all works return true else it returns false then stops the game loop in main while loop
         isRunning = true;
-    } else {
-        isRunning = false;
-    }
+        } else
+            {
+            isRunning = false;
+            }
+    
+    SDL_Surface* tempSurface = IMG_Load("player.png");
+    playerTex = SDL_CreateTextureFromSurface(renderer, tempSurface);
+    SDL_FreeSurface(tempSurface);
 }
 
 void Game::handleEvents() {
@@ -74,6 +87,12 @@ void Game::update() {
     
     //temporarily added a counter in the console window
     count++;
+    destinationRect.h = 64;
+    destinationRect.w = 64;
+    
+    destinationRect.x = count;
+    //destinationRect.y = count;
+    
     std::cout << count << std::endl;
 }
 
@@ -81,6 +100,7 @@ void Game::render() {
     
     //clear the renderer
     SDL_RenderClear(renderer);
+    SDL_RenderCopy(renderer, playerTex, NULL, &destinationRect);
     //present stuff to show
     SDL_RenderPresent(renderer);
 }
