@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B82A55F205F330B00CFA43E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B82A55E205F330B00CFA43E /* main.cpp */; };
+		8B82A567205F333700CFA43E /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B82A566205F333700CFA43E /* SDL2.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8B82A56E205F3A8B00CFA43E /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B82A56C205F3A8B00CFA43E /* game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		8B82A55B205F330B00CFA43E /* RogueLike RPC Tutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "RogueLike RPC Tutorial"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B82A55E205F330B00CFA43E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8B82A566205F333700CFA43E /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		8B82A56C205F3A8B00CFA43E /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		8B82A56D205F3A8B00CFA43E /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B82A567205F333700CFA43E /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +47,10 @@
 		8B82A552205F330B00CFA43E = {
 			isa = PBXGroup;
 			children = (
+				8B82A568205F33BA00CFA43E /* Assets */,
 				8B82A55D205F330B00CFA43E /* RogueLike RPC Tutorial */,
 				8B82A55C205F330B00CFA43E /* Products */,
+				8B82A565205F333700CFA43E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +66,25 @@
 			isa = PBXGroup;
 			children = (
 				8B82A55E205F330B00CFA43E /* main.cpp */,
+				8B82A56C205F3A8B00CFA43E /* game.cpp */,
+				8B82A56D205F3A8B00CFA43E /* game.hpp */,
 			);
 			path = "RogueLike RPC Tutorial";
+			sourceTree = "<group>";
+		};
+		8B82A565205F333700CFA43E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B82A566205F333700CFA43E /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B82A568205F33BA00CFA43E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B82A55F205F330B00CFA43E /* main.cpp in Sources */,
+				8B82A56E205F3A8B00CFA43E /* game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +259,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +271,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
