@@ -8,10 +8,11 @@
  */
 
 #include "game.hpp"
+#include "TextureManager.hpp"
+#include "GameObject.hpp"
 
-SDL_Texture* playerTex;
-SDL_Rect sourceRect;
-SDL_Rect destinationRect;
+GameObject* player;
+
 
 Game::Game()
 {
@@ -60,9 +61,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
             isRunning = false;
             }
     
-    SDL_Surface* tempSurface = IMG_Load("player.png");
-    playerTex = SDL_CreateTextureFromSurface(renderer, tempSurface);
-    SDL_FreeSurface(tempSurface);
+    player = new GameObject("player.png", renderer);
 }
 
 void Game::handleEvents() {
@@ -87,11 +86,7 @@ void Game::update() {
     
     //temporarily added a counter in the console window
     count++;
-    destinationRect.h = 64;
-    destinationRect.w = 64;
-    
-    destinationRect.x = count;
-    //destinationRect.y = count;
+    player->Update();
     
     std::cout << count << std::endl;
 }
@@ -100,7 +95,7 @@ void Game::render() {
     
     //clear the renderer
     SDL_RenderClear(renderer);
-    SDL_RenderCopy(renderer, playerTex, NULL, &destinationRect);
+    player->Render();
     //present stuff to show
     SDL_RenderPresent(renderer);
 }

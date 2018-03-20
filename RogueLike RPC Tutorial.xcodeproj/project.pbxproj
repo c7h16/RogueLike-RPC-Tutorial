@@ -11,17 +11,19 @@
 		8B82A567205F333700CFA43E /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B82A566205F333700CFA43E /* SDL2.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8B82A56E205F3A8B00CFA43E /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B82A56C205F3A8B00CFA43E /* game.cpp */; };
 		8B82A570205F5ADA00CFA43E /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B82A56F205F5ADA00CFA43E /* SDL2_image.framework */; };
+		D772616020615EE000774754 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D772615E20615EE000774754 /* GameObject.cpp */; };
+		D77261632061669B00774754 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D77261612061669B00774754 /* TextureManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8B82A559205F330B00CFA43E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "/Users/developer/Documents/CPP Projects/RogeLike RPG Tutorial/RogueLike RPC Tutorial/Assets";
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "Users/dev/Documents/RogueLike-RPC-Tutorial/Assets";
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -32,7 +34,11 @@
 		8B82A56C205F3A8B00CFA43E /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
 		8B82A56D205F3A8B00CFA43E /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
 		8B82A56F205F5ADA00CFA43E /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
-		8B82A571205F73A100CFA43E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = SOURCE_ROOT; };
+		D77261582061548200774754 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		D772615E20615EE000774754 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		D772615F20615EE000774754 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
+		D77261612061669B00774754 /* TextureManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
+		D77261622061669B00774754 /* TextureManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +57,7 @@
 		8B82A552205F330B00CFA43E = {
 			isa = PBXGroup;
 			children = (
-				8B82A568205F33BA00CFA43E /* Assets */,
+				D77261572061548200774754 /* Assets */,
 				8B82A55D205F330B00CFA43E /* RogueLike RPC Tutorial */,
 				8B82A55C205F330B00CFA43E /* Products */,
 				8B82A565205F333700CFA43E /* Frameworks */,
@@ -69,6 +75,10 @@
 		8B82A55D205F330B00CFA43E /* RogueLike RPC Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D772615E20615EE000774754 /* GameObject.cpp */,
+				D77261612061669B00774754 /* TextureManager.cpp */,
+				D77261622061669B00774754 /* TextureManager.hpp */,
+				D772615F20615EE000774754 /* GameObject.hpp */,
 				8B82A55E205F330B00CFA43E /* main.cpp */,
 				8B82A56C205F3A8B00CFA43E /* game.cpp */,
 				8B82A56D205F3A8B00CFA43E /* game.hpp */,
@@ -85,10 +95,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8B82A568205F33BA00CFA43E /* Assets */ = {
+		D77261572061548200774754 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				8B82A571205F73A100CFA43E /* Assets */,
+				D77261582061548200774754 /* player.png */,
 			);
 			path = Assets;
 			sourceTree = SOURCE_ROOT;
@@ -152,6 +162,8 @@
 			files = (
 				8B82A55F205F330B00CFA43E /* main.cpp in Sources */,
 				8B82A56E205F3A8B00CFA43E /* game.cpp in Sources */,
+				D772616020615EE000774754 /* GameObject.cpp in Sources */,
+				D77261632061669B00774754 /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
